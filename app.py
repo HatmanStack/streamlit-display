@@ -17,4 +17,4 @@ def get_party_invites():
     my_cur.execute("select * from SHEETS")
     return my_cur.fetchall()
 
-get_cur()
+#get_cur()
