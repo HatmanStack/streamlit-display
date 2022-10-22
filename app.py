@@ -4,7 +4,7 @@ import requests
 import snowflake.connector
 
 
-streamlit.header("Invite Results")
+streamlit.markdown("<h1 style='text-align: center; color: steelblue;'>Invite Results</h1>", unsafe_allow_html=True)
 
 def get_cur():
   my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
