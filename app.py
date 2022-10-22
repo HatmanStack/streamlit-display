@@ -4,6 +4,8 @@ import requests
 import snowflake.connector
 
 
+streamlit.header("Invite Results")
+
 def get_cur():
   my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
   data = get_party_invites(my_cnx)
