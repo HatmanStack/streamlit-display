@@ -11,6 +11,7 @@ def get_cur():
   data = get_party_invites(my_cnx)
   my_cnx.close()
   df = pandas.DataFrame(data)
+  df.iloc[:,0]= df.iloc[:,0].str[:11]
   streamlit.table(df)
 
 
