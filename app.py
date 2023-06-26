@@ -7,7 +7,7 @@ import requests
 streamlit.markdown("<h1 style='text-align: center; color: steelblue;'>Invite Results</h1>", unsafe_allow_html=True)
 
 def get_cur():
-conn = st.experimental_connection('snowflake', type='sql')
+  conn = st.experimental_connection('snowflake', type='sql')
   data = get_party_invites(conn)
   my_cnx.close()
   df = pandas.DataFrame(data)
