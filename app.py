@@ -14,7 +14,7 @@ def get_cur():
   time_stamp = df.iloc[:,0]
   altered_time = [i.split(' ')[0] for i in time_stamp]
   df.iloc[:,0] = altered_time
-  streamlit.table(df)
+  st.table(df)
 
 
 def get_party_invites(my_cnx):
