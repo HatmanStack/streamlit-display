@@ -4,7 +4,7 @@ import requests
 
 
 
-streamlit.markdown("<h1 style='text-align: center; color: steelblue;'>Invite Results</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: steelblue;'>Invite Results</h1>", unsafe_allow_html=True)
 
 def get_cur():
   conn = st.experimental_connection('snowflake', type='sql')
