@@ -7,11 +7,11 @@ import snowflake.connector
 streamlit.markdown("<h1 style='text-align: center; color: steelblue;'>Invite Results</h1>", unsafe_allow_html=True)
 
 def get_cur():
-  my_cnx = snowflake.connector.connect( user= "cgalliart",
+  my_cnx = snowflake.connector.connect([user= "cgalliart",
 password= "BpoQdMDa5dSAVF",
 account= "iy54789.us-east-2.aws",
 warehouse= "compute_wh",
-database= "DEMO_DB")#**streamlit.secrets["snowflake"])
+database= "DEMO_DB"])#**streamlit.secrets["snowflake"])
   data = get_party_invites(my_cnx)
   my_cnx.close()
   df = pandas.DataFrame(data)
